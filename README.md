@@ -1,6 +1,6 @@
 ## End to End Machine Learning Project - Regression
 
-Description: An end-to-end regression solution implemented using a modular programming approach. The model (with an accuracy of 84%) predicts students' exam performance based on several highly correlated features like parental background, course completion, scores in other sections and more. Deployed on AWS Elastic Beanstalk using CI code pipeline
+Description: An end-to-end regression solution implemented using a modular programming approach. The model predicts students' exam performance based on several highly correlated features like parental background, course completion, scores in other sections and more. Deployed on AWS Elastic Beanstalk using CI code pipeline
 
 UPDATE: AWS CI-CD Production Grade Deployment using ECR, EC2 and Dockers.
 
