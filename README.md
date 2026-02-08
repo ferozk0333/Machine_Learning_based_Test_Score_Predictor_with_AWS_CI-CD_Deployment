@@ -1,6 +1,43 @@
-## End to End Machine Learning Project - Regression
+# End-to-End Machine Learning Project – Regression
 
-Description: An end-to-end regression solution implemented using a modular programming approach. The model predicts students' exam performance based on several highly correlated features like parental background, course completion, scores in other sections and more. Deployed on AWS Elastic Beanstalk using CI code pipeline
+This project implements a modular, production-ready regression system to predict students' exam performance using demographic and academic features such as parental background, course completion, and prior subject scores.
+
+The solution follows a structured ML workflow:
+
+- Data ingestion → transformation → model training → artifact versioning → inference
+- Feature engineering with One-Hot Encoding (categorical) and scaling (numeric)
+- Feature selection using correlation pruning and L1/L2 regularization
+- Cross-validated hyperparameter tuning for improved generalization
+
+---
+
+## Modeling Approach
+
+### Data Processing
+- Train/test split
+- Missing & duplicate handling
+- One-Hot Encoding for categorical variables
+- Standard scaling for numerical features
+
+### Regularization & Optimization
+- Ridge (L2), Lasso (L1), and ElasticNet regression
+- Cross-validation for hyperparameter tuning
+- Reduced multicollinearity using L1-based feature pruning
+- Persisted model + preprocessor as serialized artifacts (`model.pkl`, `preprocessor.pkl`)
+
+---
+
+## Results
+
+Final tuned model performance on held-out test set:
+
+- **MAE:** 3.8  
+- **RMSE:** 5.1  
+- **R²:** 0.89  
+
+Compared to an unregularized baseline:
+- Baseline RMSE: 6.6  
+- Improved generalization and reduced train–test performance gap  
 
 UPDATE: AWS CI-CD Production Grade Deployment using ECR, EC2 and Dockers.
 
